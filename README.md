@@ -1,3 +1,9 @@
+## I goofed up on the crate naming
+
+I intended to name this `pg-jq` but left it as `pg_jq`. Whoops.
+
+I'll leave this here, but future releases(if there are any) will be pg-jq.
+
 ## WARNING
 
 This is a toy PostgreSQL extension that exposes basic libjq functionality to PostgreSQL.
