@@ -1,6 +1,6 @@
 [package]
-name = "pg_jq"
-version = "0.0.2"
+name = "pg-jq"
+version = "0.0.3"
 authors = ["Chad Catlett <chad@catlett.info>"]
 license = "AGPL-3.0-or-later"
 description = "A PostgreSQL extension to expose libjq as a basic function. Not recommended for real usage. It is a toy."
