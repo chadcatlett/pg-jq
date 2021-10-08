@@ -1,0 +1,44 @@
+[package]
+name = "pg_jq"
+description = "A PostgreSQL extension to expose libjq as a basic function. Not recommended for real usage. It is a toy."
+repository = "https://github.com/chadcatlett/pg-jq"
+authors = ["Chad Catlett <chad@catlett.info>"]
+license = "AGPL-3.0-or-later"
+license-file = "LICENSE.txt"
+version = "0.0.1"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = ["pg11"]
+pg10 = ["pgx/pg10", "pgx-tests/pg10" ]
+pg11 = ["pgx/pg11", "pgx-tests/pg11" ]
+pg12 = ["pgx/pg12", "pgx-tests/pg12" ]
+pg13 = ["pgx/pg13", "pgx-tests/pg13" ]
+pg_test = []
+
+[dependencies]
+pgx = "0.1"
+pgx-macros = "0.1"
+rand = "0.8.4"
+jq-rs = "0.4.1"
+serde = "1.0.130"
+serde_json = "1.0.67"
+
+#[dependencies.jq-rs]
+#version = "0.4.1"
+#features = ["bundled"]
+
+[dev-dependencies]
+pgx-tests = "0.1.22"
+
+[profile.dev]
+panic = "unwind"
+
+[profile.release]
+panic = "unwind"
+opt-level = 3
+lto = "fat"
+codegen-units = 1
