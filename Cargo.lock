@@ -1006,8 +1006,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "pg-jq"
-version = "0.0.3"
+name = "pg_jq"
+version = "0.0.4"
 dependencies = [
  "cargo-pgx",
  "jq-rs",
