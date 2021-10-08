@@ -1,11 +1,11 @@
 [package]
 name = "pg_jq"
-description = "A PostgreSQL extension to expose libjq as a basic function. Not recommended for real usage. It is a toy."
-repository = "https://github.com/chadcatlett/pg-jq"
+version = "0.0.0"
 authors = ["Chad Catlett <chad@catlett.info>"]
 license = "AGPL-3.0-or-later"
-license-file = "LICENSE.txt"
-version = "0.0.1"
+description = "A PostgreSQL extension to expose libjq as a basic function. Not recommended for real usage. It is a toy."
+homepage = "https://github.com/chadcatlett/pg-jq"
+repository = "https://github.com/chadcatlett/pg-jq"
 edition = "2018"
 
 [lib]
@@ -32,7 +32,8 @@ serde_json = "1.0.67"
 #features = ["bundled"]
 
 [dev-dependencies]
-pgx-tests = "0.1.22"
+pgx-tests = "0.1"
+cargo-pgx = "0.1"
 
 [profile.dev]
 panic = "unwind"
